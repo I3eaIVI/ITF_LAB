@@ -1,1 +1,2 @@
-read tum mai wa ITF LAB04
+#read tum mai wa ITF LAB04
+#I LOVE THAILAND
