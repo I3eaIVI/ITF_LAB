@@ -1,5 +1,12 @@
 body {
-    margin: 0;
+  font-family: 'Kanit', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  margin: 8px 32px;
 }
 
 nav {
@@ -10,11 +17,56 @@ nav {
     background-color: #1665E5;
     color: white;
 }
-
-.container {
-    margin: 8px 32px;
+textarea {
+  width: 90%;
+  margin: 20px auto;
+  display: block;
+  resize: none;
+  padding: 10px;
+  font-family: monospace;
 }
 
-#my-title {
-    color: rebeccapurple;
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.User {
+  display: flex;
+  margin: 8px 32px;
+}
+
+.left, .right {
+  background-color: white;
+  padding: 20px;
+  width: 40%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input, select {
+  padding: 8px;
+  margin: 8px 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px 0;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-group button {
+  width: 48%;
+}
+
+button:hover {
+  background-color: #005cb2;
 }

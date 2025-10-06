@@ -1,41 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ITF 2025</title>
-        <link rel="stylesheet" href="styles.css">
-        <style>
-            .container {
-                display: flex;
-                align-items: center;
-            }
-            .container img {
-                max-width: 96;
-                margin: 20px;
-            }
-            .container h2 {
-                font-size: 16px;
-            }
-        </style>
-    </head>
-    <body>
-        <nav>
-            <p>68070076</p>
-            <h2>ITF Website</h2>
-            <p>Week 14</p>
-        </nav>
-        <div class="container">
-            <img src="Laugh.png" width="96" alt="Laugh" />
-            <h2 id="my-title">Welcome to my ITF Website!</h2>
-			<hr>
-			<div>
-				<label for="my_input">Enter any number:</label>
-				<input type="number" id="my_input" value="1">
-				<button type="button" onclick="calc(this.innerText)">+1</button>
-				<button type="button" onclick="calc(this.innerText)">-1</button>
-			</div>
+  <head>
+    <meta charset="UTF-8">
+    <title>ITF 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav>
+      <p>68070076</p>
+      <h1>ITFWebsite</h1>
+      <p>week 14</p>
+    </nav>
+    <div class="header">
+      <img src="Cool.png" width="150" height="150" alt="Cool" />
+      <div>
+        <h1>ITF Simple Bank</h1>
+        <h2 id="my-title">Welcome to my First HTML + CSS + JS website!</h2>
+      </div>
+    </div>
+    <!-- History -->
+    <textarea id="history" rows="10" readonly>
+    1. Current account balance: 1000, Current cash balance: 1000
+    </textarea>
+  <div class="container">
+    <!-- Left Section -->
+    <div class="left">
+      <h1>Account Overview</h1>
+      <div class="User">
+        <img src="user.png" width="100" height="100" alt="user">
+        <div>
+          <h2>Account Information</h2>
+          <p><strong>Name:</strong> Noppadon Duangchairakkasem</p>
+          <p><strong>Type:</strong> Savings Account</p>
         </div>
-    </body>
-	<script src="script.js"></script>
+      </div>
+      <div class="User">
+        <img src="briefcase.png" width="100" height="100"alt="user">
+        <div>
+          <h2>Balance Information</h2>
+          <label>Current account balance:</label>
+          <input type="number" id="accountBalance" value="1000"><br>
+          <label>Current cash balance:</label>
+          <input type="number" id="cashBalance" value="1000"><br>
+          <button onclick="updateBalances()">Change</button>
+        </div>
+      </div>
+      <div class="User">
+        <img src="toolbox.png" width="100" height="100"alt="user">
+        <div>
+          <h2>Bank Operation</h2>
+          <input type="number" id="amount" placeholder="Enter amount">
+          <div class="button-group">
+            <button onclick="deposit()">Deposit</button>
+            <button onclick="withdraw()">Withdraw</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right">
+      <h1>Financial Tools</h1>
+      <div class="User">
+        <img src="coins.png" width="100" height="100"alt="user">
+        <div>
+          <h2>Currency Converter</h2>
+          <label>Input balance:</label>
+          <input type="number" id="currencyInput" placeholder="0"><br>
+          <label>Input currency:</label>
+          <select id="currencyType">
+            <option value="USD">USD</option>
+            <option value="THB">THB</option>
+          </select>
+          <button>Convert</button><br>
+          <label>Output balance:</label>
+          <input type="text" id="currencyOutput" readonly value="0">
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
